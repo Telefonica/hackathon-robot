@@ -13,7 +13,7 @@ var MOVES = {
     'down': 4
 };
 
-app.get('/move/:button', function(req, res) {
+app.post('/move/:button', function(req, res) {
     var button = req.params.button;
 
     var move = MOVES[button];
@@ -29,6 +29,10 @@ app.get('/move/:button', function(req, res) {
 
         res.send('ok ' + button);
     });
+});
+
+app.get('/status', function(req, res) {
+    res.send('ok');
 });
 
 var serialDevice = process.env.SERIAL_DEVICE || '/dev/tty-usbserial1';
