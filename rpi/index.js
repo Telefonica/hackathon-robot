@@ -9,7 +9,7 @@ var server = http.createServer(app);
 var MOVES = {
     'up': '1',
     'left': '2',
-    'rigth': '3',
+    'right': '3',
     'down': '4'
 };
 
