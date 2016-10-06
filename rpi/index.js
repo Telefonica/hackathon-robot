@@ -7,17 +7,17 @@ var server = http.createServer(app);
 
 // XXX a websocket connection could work better
 var MOVES = {
-    'up': 1,
-    'left': 2,
-    'rigth': 3,
-    'down': 4
+    'up': '1',
+    'left': '2',
+    'rigth': '3',
+    'down': '4'
 };
 
 app.post('/move/:button', function(req, res) {
     var button = req.params.button;
 
     var move = MOVES[button];
-    if (!code) {
+    if (!move) {
         return res.status(400).send('fail wrong input');
     }
 
@@ -53,4 +53,4 @@ process.on('uncaughtException', function (err) {
     process.exit(1);
 });
 
-app.listen(3000);
+app.listen(3000, '0.0.0.0');
