@@ -37,15 +37,14 @@ void setup(){
 
 void turn_left(){
   current_action = LEFT;
-  move(1, 100, 1);
   move(2, 0, 1);
+  move(1, 255, 1);
 }
 
 void turn_right(){
-//  move(1, 100, 0);
   current_action = RIGHT;
   move(1, 0, 1);
-  move(2, 100, 1);
+  move(2, 255, 1);
 }
 
 
@@ -124,7 +123,7 @@ void loop(){
       }
       Serial.println(action);
 //      delay(1000);        // delay in between reads for stability
-    } else if (lastActionTs + 500 < millis()) {
+    } else if (lastActionTs + 300 < millis()) {
       stop_car();
       lastActionTs = millis();
       Serial.println("STOP");
