@@ -1,0 +1,132 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+  background: url('../images/fondo.jpg');
+  background-size: cover;
+}
+
+.vs-header {
+  position: relative;
+  background: transparent;
+  border: none;
+  height: 40px;
+}
+  .vs-header h2 {
+    background: url('../images/logo_movistar.png');
+    height: 55px;
+    width: 208px;
+    top: 55px;
+    left: 8px;
+  }
+  .vs-header  h1 {
+    right: 20px;
+    height: auto;
+    bottom: 30px;
+	color: white;
+	font-weight: bold;
+	float: right;
+  }
+
+.vs-wrapper {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  min-width: 590px; // Width approximately corresponging to a window size of 640px, that we considered the min size
+}
+  
+.vs-content {
+  box-sizing: border-box;
+  padding-top: 65px;
+  min-height: 500px;
+  padding-bottom: 150px;
+}
+
+@media only screen and (min-width: 960px) {
+  .vs-wrapper {width: 960px;}
+}  
+
+#videoDiv {
+	float: left;
+	height: 360px;
+	width: 480px;
+	background: white;
+}
+
+.controls {
+	float: left;
+	margin-left: 50px;
+	margin-top: 50px;
+	height: 300px;
+	width: 400px;
+	position: relative;
+}
+
+.control {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.up {
+	top: 0;
+	left: 100px;
+	background: url('../images/up.png') no-repeat;
+}
+
+.down {
+	top: 200px;
+	left: 100px;
+	background: url('../images/down.png') no-repeat;
+}
+
+.left {
+	top: 100px;
+	left: 0;
+	background: url('../images/left.png') no-repeat;
+}
+
+.right {
+	top: 100px;
+	left: 200px;
+	background: url('../images/right.png') no-repeat;
+}
+
+.speedUp {
+	top: 50px;
+	left: 300px;
+	background: url('../images/speedUp.png') no-repeat;
+}
+
+.speedDown {
+	top: 150px;
+	left: 300px;
+	background: url('../images/speedDown.png') no-repeat;
+}
+
+#footer {
+  min-width: 640px;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  background: url('../images/fondo_pie.png');
+}
+	#footer .vs-wrapper {
+		background: url('../images/logo_movistar_pie.png') no-repeat 0px 5px;
+		padding-top: 5px;
+		line-height: 14px;
+	}
+		#footer .vs-wrapper  .tef_logo {
+			height: 36px;
+			width: 105px;
+			position: absolute;
+			top: 5px;
+			right: 0;
+			background: url('../images/logo_telefonica.png');
+		}
