@@ -13,7 +13,7 @@ Wireless Joystick that allows us to control the orientation of a remote camera, 
 Architecture:
 ------------------
 Joystick:
-NodeMCU board with ESP8266 Microcontroller. (Wifi integrated)
+NodeMCU board with ESP8266 microcontroller. (Wifi integrated)
 Analog Joystick module with 2 axis and a push button.
 Analog to Digital converter. I2C
 Powerbank.
