@@ -1,6 +1,6 @@
 Wifi Joystick.
 ----------------------------------
-Wireless Joystick that allows us to control the orientation of a remote camera, or telepresence robot remotely using a Wifi network.
+Wireless Joystick allows us to control the orientation of a remote camera, or telepresence robot remotely using a Wifi network.
 
 ```
   Joystick                        UDP Server                           Arduino
