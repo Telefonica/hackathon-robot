@@ -1,6 +1,6 @@
 Wifi Joystick.
 ----------------------------------
-Wireless Joystick that allows us to control the orientation of a remote camera, or telepresence robot remotely using a Wifi network.`
+Wireless Joystick that allows us to control the orientation of a remote camera, or telepresence robot remotely using a Wifi network.
 
 ```
   Joystick                        UDP Server                           Arduino
@@ -16,8 +16,11 @@ Architecture:
 ------------------
 Joystick:
 NodeMCU board with ESP8266 microcontroller. (Wifi integrated)
+
 Analog Joystick module with 2 axis and a push button.
+
 Analog to Digital converter. I2C
+
 Powerbank.
 
 Server:
@@ -25,6 +28,7 @@ Node Js server that accept UDP packages and send messages to an arduino using se
 
 Camera Platform:
  Arduino device. (Arduino UNO or Arduino Nano board.)
+ 
  Two servo motors SG90. From 0º to 180º.
 
 Main Repository:
