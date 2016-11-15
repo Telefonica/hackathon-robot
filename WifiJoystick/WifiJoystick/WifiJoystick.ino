@@ -90,18 +90,23 @@ void loop() {
   adc1y = map(adc1, 24, 25894, -14, 14);
 
   int clickStatus =  digitalRead(clickKey);
-  Serial.print("AIN0: "); Serial.println(remap(adc0x));
-  Serial.print("AIN1: "); Serial.println(remap(adc1y));
-  Serial.print("Click: "); Serial.println(inverse(clickStatus));
-  delay(800);
-
-  String str = "x:"+ String(remap(adc0x), DEC) + ",y:"+String(remap(adc1y), DEC)+",k:"+ String(inverse(clickStatus), DEC);
-  int str_len = str.length() + 1;
-  char char_array[str_len];
-
-  // Copy it over 
-  str.toCharArray(char_array, str_len); 
-  udpSend(char_array);
-  // put your main code here, to run repeatedly:
+  int remapedX = remap(adc0x);
+  int remapedY = remap(adc1y);
+  int remapedClick = inverse(clickStatus);
+  Serial.print("AIN0: "); Serial.println(remapedX);
+  Serial.print("AIN1: "); Serial.println(remapedY);
+  Serial.print("Click: "); Serial.println(remapedClick);
+  delay(150);
+  if (remapedX == 0 && remapedY == 0 && remapedClick == 0) {
+    Serial.print("No action");
+  } else {
+    String str = "x:"+ String(remapedX, DEC) + ",y:"+String(remapedY, DEC)+",k:"+ String(remapedClick, DEC);
+    int str_len = str.length() + 1;
+    char char_array[str_len];
+  
+    // Copy it over 
+    str.toCharArray(char_array, str_len); 
+    udpSend(char_array);
+  }
 
 }
