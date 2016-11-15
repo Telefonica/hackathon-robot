@@ -14,7 +14,8 @@ Wireless Joystick that allows us to control the orientation of a remote camera, 
 
 Architecture:
 ------------------
-Joystick:
+**Joystick:**
+
 NodeMCU board with ESP8266 microcontroller. (Wifi integrated)
 
 Analog Joystick module with 2 axis and a push button.
@@ -23,10 +24,11 @@ Analog to Digital converter. I2C
 
 Powerbank.
 
-Server:
+**Server:**
+
 Node Js server that accept UDP packages and send messages to an arduino using serial communication.
 
-Camera Platform:
+**Camera Platform:**
  Arduino device. (Arduino UNO or Arduino Nano board.)
  
  Two servo motors SG90. From 0º to 180º.
