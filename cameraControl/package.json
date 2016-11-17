@@ -1,0 +1,16 @@
+{
+  "name": "WifiJoystickServer",
+  "version": "1.0.0",
+  "description": "UDP server for WifiJoystick",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serialport": "^4.0.3",
+    "dgram": "~1.0.1"
+  }
+}
