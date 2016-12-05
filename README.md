@@ -12,3 +12,4 @@ Evolving the robot
 --
 
 * Version 2 with [3d printed](./3DParts) shock absorbers: https://youtu.be/JkA4-V8ke-c
+* [Wifi Joystick](.WifiJoystick) to control de robot built in another Hackaton in Walqa (Huesca)
